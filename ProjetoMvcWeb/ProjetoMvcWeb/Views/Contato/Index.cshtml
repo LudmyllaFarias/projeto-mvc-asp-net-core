@@ -1,5 +1,62 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Listagem de contatos";
 }
+
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="button">Adicionar novo contato</a>
+    </div>
+    <br/>
+    <h3 class="display-4 mb-4">Listagem de contatos</h3>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Email</th>
+          <th scope="col">Celular</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>mark@gmail.com</td>
+          <td>11 93456-8723</td>
+          <td>
+            <div class="btn-group" role="group">
+              <a role="button" class="btn btn-info">Editar</a>
+              <a role="button" class="btn btn-danger">Apagar</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>jacob@gmail.com</td>
+          <td>62 94356-8754</td>
+           <td>
+            <div class="btn-group" role="group">
+              <a role="button" class="btn btn-info">Editar</a>
+              <a role="button" class="btn btn-danger">Apagar</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>larry@gmail.com</td>
+          <td>11 98723-4356</td>
+           <td>
+            <div class="btn-group" role="group">
+              <a role="button" class="btn btn-info">Editar</a>
+              <a role="button" class="btn btn-danger">Apagar</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
