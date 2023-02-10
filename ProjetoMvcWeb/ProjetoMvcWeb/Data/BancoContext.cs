@@ -11,6 +11,8 @@ namespace ProjetoMvcWeb.Data
 
         public DbSet<Contato> contatos { get; set; }
 
+        public DbSet<Usuario> usuarios { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder.UseSqlite(@"Data Source=C:\Users\ludmylla.farias\Downloads\SQLiteDatabaseBrowserPortable\contato.db");
     }
