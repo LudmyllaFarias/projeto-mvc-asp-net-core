@@ -11,18 +11,24 @@
 </div>
 
 <form class="row g-3" asp-controller="Contato" asp-action="Criar" method="post">
-  <div class="col-md-6">
-    <label for="nome" class="form-label">Nome</label>
-    <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do contato">
-  </div>
- <div class="col-md-6">
-   <label for="email" class="form-label">E-mail</label>
-   <input type="email" asp-for="Email" class="form-control" placeholder="Digite o e-mail do contato">
- </div>
- <div class="col-md-6">
-    <label for="celular" class="form-label">Contato</label>
-    <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o celular do contato">
- </div>
+ 
+    <div class="col-md-6">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do contato">
+        <span style="color: red;">@Html.ValidationMessageFor( c => c.Nome)</span>
+    </div>
+
+     <div class="col-md-6">
+       <label for="email" class="form-label">E-mail</label>
+       <input type="email" asp-for="Email" class="form-control" placeholder="Digite o e-mail do contato">
+        <span style="color: red;">@Html.ValidationMessageFor( c => c.Email)</span>
+    </div>
+
+     <div class="col-md-6">
+        <label for="celular" class="form-label">Contato</label>
+        <input type="text" asp-for="Celular" class="form-control" placeholder="Digite o celular do contato">
+         <span style="color: red;">@Html.ValidationMessageFor( c => c.Celular)</span>
+    </div>
 
   <div class="col-12 mt-4">
     <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
