@@ -399,3 +399,6 @@ C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\Pro
 C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\ProjetoMvcWeb.pdb
 C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\ProjetoMvcWeb.genruntimeconfig.cache
 C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
+C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Criar.cshtml.g.cs
+C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Editar.cshtml.g.cs
+C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ApagarConfirmacao.cshtml.g.cs
