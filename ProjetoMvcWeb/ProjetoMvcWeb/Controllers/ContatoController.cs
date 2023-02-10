@@ -30,9 +30,10 @@ namespace ProjetoMvcWeb.Controllers
             return View(contato);
         }
 
-        public IActionResult ApagarConfirmacao()
+        public IActionResult ApagarConfirmacao(int id)
         {
-            return View();
+            Contato contato = _contatoRepository.buscarPorId(id);
+            return View(contato);
         }
 
         [HttpPost]
@@ -46,6 +47,11 @@ namespace ProjetoMvcWeb.Controllers
         public IActionResult Editar(Contato contato)
         {
             _contatoRepository.Atualizar(contato);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Apagar(int id) {
+            _contatoRepository.Apagar(id);
             return RedirectToAction("Index");
         }
     }

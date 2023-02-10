@@ -48,5 +48,16 @@ namespace ProjetoMvcWeb.Repositories
             _bancoContext.SaveChanges();
             return contatoDb;
         }
+
+        public bool Apagar(int id)
+        {
+            Contato contatoDb = buscarPorId(id);
+
+            if (contatoDb == null) throw new Exception("Houve um erro ao apagar o contato.");
+
+            _bancoContext.contatos.Remove(contatoDb);
+            _bancoContext.SaveChanges();
+            return true;
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace ProjetoMvcWeb.Repositories
 
         Contato Atualizar(Contato contato);
 
+        bool Apagar (int id);
     }
 }
