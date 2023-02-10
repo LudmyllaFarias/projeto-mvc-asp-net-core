@@ -9,5 +9,9 @@ namespace ProjetoMvcWeb.Repositories
 
         List<Contato> buscarTodos();
 
+        Contato buscarPorId(int id);
+
+        Contato Atualizar(Contato contato);
+
     }
 }

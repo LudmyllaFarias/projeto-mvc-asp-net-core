@@ -24,9 +24,10 @@ namespace ProjetoMvcWeb.Controllers
             return View();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+            Contato contato = _contatoRepository.buscarPorId(id);
+            return View(contato);
         }
 
         public IActionResult ApagarConfirmacao()
@@ -38,6 +39,13 @@ namespace ProjetoMvcWeb.Controllers
         public IActionResult Criar(Contato contato)
         {
             _contatoRepository.Adicionar(contato);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Editar(Contato contato)
+        {
+            _contatoRepository.Atualizar(contato);
             return RedirectToAction("Index");
         }
     }
