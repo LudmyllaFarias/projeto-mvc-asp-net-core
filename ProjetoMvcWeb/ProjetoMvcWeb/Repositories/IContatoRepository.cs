@@ -1,4 +1,5 @@
 ﻿using ProjetoMvcWeb.Models;
+using System.Collections.Generic;
 
 namespace ProjetoMvcWeb.Repositories
 {
@@ -6,6 +7,7 @@ namespace ProjetoMvcWeb.Repositories
     {
         Contato Adicionar(Contato contato);
 
+        List<Contato> buscarTodos();
 
     }
 }

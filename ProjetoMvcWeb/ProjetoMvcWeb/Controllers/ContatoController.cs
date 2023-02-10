@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjetoMvcWeb.Models;
 using ProjetoMvcWeb.Repositories;
+using System.Collections.Generic;
 
 namespace ProjetoMvcWeb.Controllers
 {
@@ -14,7 +15,8 @@ namespace ProjetoMvcWeb.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<Contato> contatos = _contatoRepository.buscarTodos();
+            return View(contatos);
         }
 
         public IActionResult Criar()

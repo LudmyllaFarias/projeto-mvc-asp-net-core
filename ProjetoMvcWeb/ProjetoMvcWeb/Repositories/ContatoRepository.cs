@@ -1,5 +1,7 @@
 ﻿using ProjetoMvcWeb.Data;
 using ProjetoMvcWeb.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProjetoMvcWeb.Repositories
 {
@@ -16,6 +18,11 @@ namespace ProjetoMvcWeb.Repositories
             _bancoContext.SaveChanges();
             return contato;
             
+        }
+
+        public List<Contato> buscarTodos()
+        {
+            return _bancoContext.contatos.ToList();
         }
     }
 }
