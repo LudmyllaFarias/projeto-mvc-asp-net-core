@@ -1,14 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjetoMvcWeb.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ProjetoMvcWeb.Repositories;
 
 namespace ProjetoMvcWeb
 {
@@ -24,9 +21,12 @@ namespace ProjetoMvcWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-            services.AddEntityFrameworkSqlite()
-                .AddDbContext<BancoContext>();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            
+            services.AddDbContext<BancoContext>(options => options
+            .UseSqlite("Data Source=contato.db"));
+
+            services.AddScoped<IContatoRepository, ContatoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
