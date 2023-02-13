@@ -402,3 +402,5 @@ C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\Pro
 C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\ProjetoMvcWeb.Views.pdb
 C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\ProjetoMvcWeb.csproj.CopyComplete
 C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\ProjetoMvcWeb.genruntimeconfig.cache
+C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\ws-csharp\projeto-mvc\ProjetoMvcWeb\ProjetoMvcWeb\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDeslogada.cshtml.g.cs

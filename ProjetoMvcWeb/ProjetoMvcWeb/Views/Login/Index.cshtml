@@ -1,0 +1,45 @@
+﻿@model LoginModel;
+@{
+    Layout = "_LayoutDeslogada";
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+        <br/>
+        @if (TempData["MensagemSucesso"] != null)
+        {
+                  <div class="alert alert-success" role="alert">
+                        <button type="button" class="btn btn-success btn-sm close-alert" arial-label="Close">x</button>
+                @TempData["MensagemSucesso"]
+                    </div>
+        }
+
+        @if (TempData["MensagemErro"] != null)
+        {   
+                   <div class="alert alert-danger" role="alert">
+                      <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">x</button>
+                @TempData["MensagemErro"]
+                </div>
+        }
+
+</div>
+
+    <br />
+    <h3 class="text-center mb-4 mt-4">Login</h3>
+    <form asp-controller="Login" asp-action="Entrar" method="post">
+
+      <div class="mb-3">
+        <label for="Login" class="form-label">Login</label>
+        <input type="text" asp-for="Login" class="form-control" name="Login">
+        <span style="color: red;">@Html.ValidationMessageFor( c => c.Login)</span>
+    </div>
+
+      <div class="mb-3">
+         <label for="Senha" class="form-label">Senha</label>
+         <input type="password" asp-for="Senha" class="form-control" name="Senha">
+          <span style="color: red;">@Html.ValidationMessageFor( c => c.Senha)</span>
+        </div>
+
+      <buton type="submit" class="btn btn-primary btn-block">Entrar</buton>
+
+    </form>
