@@ -9,7 +9,7 @@ using ProjetoMvcWeb.Data;
 namespace ProjetoMvcWeb.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20230210184353_InitialCreate")]
+    [Migration("20230213132121_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,18 +54,22 @@ namespace ProjetoMvcWeb.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Login")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Perfil")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Senha")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

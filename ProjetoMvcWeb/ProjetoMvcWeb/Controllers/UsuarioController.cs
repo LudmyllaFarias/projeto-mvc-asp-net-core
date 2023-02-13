@@ -59,13 +59,24 @@ namespace ProjetoMvcWeb.Controllers
         }
 
         [HttpPost]
-        public IActionResult Editar(Usuario usuario)
+        public IActionResult Editar(UsuarioSemSenha usuarioSemSenha)
         {
             try
             {
+                Usuario usuario = null;
+
                 if (ModelState.IsValid)
                 {
-                    _usuarioRepository.Atualizar(usuario);
+                    usuario = new Usuario()
+                    {
+                        Id = usuarioSemSenha.Id,
+                        Nome = usuarioSemSenha.Nome,
+                        Login = usuarioSemSenha.Login,
+                        Email = usuarioSemSenha.Email,
+                        Perfil = usuarioSemSenha.Perfil,
+                    };
+
+                    usuario = _usuarioRepository.Atualizar(usuario);
                     TempData["MensagemSucesso"] = "Usuário atualizado com sucesso!";
                     return RedirectToAction("Index");
                 }
